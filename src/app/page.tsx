@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { v4 as uuid } from "uuid";
 import ChoiceCard from "./ChoiceCard";
 import {
   type CoffeeGroup,
@@ -51,7 +52,7 @@ const QuizScreen: React.FC<QuizScreenProps> = ({ question, onAnswer }) => (
       <div className="mt-4 flex flex-wrap justify-center gap-8" id="choices">
         {question.answers.map((answer, idx) => (
           <ChoiceCard
-            key={idx}
+            key={uuid()}
             idx={idx}
             answer={answer}
             handleAnswer={onAnswer}
