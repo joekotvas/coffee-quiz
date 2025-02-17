@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --burnt-orange: #b36737;
+  --golden: #D88549;
+}
+
+@layer base {
+    *:focus {
+        outline: solid 4px var(--burnt-orange);
+    }
+  }
